@@ -1,4 +1,4 @@
-" use client";
+"use client";
 
 import { useSelf } from "@/liveblocks.config";
 import { Info } from "./info";
@@ -13,7 +13,7 @@ export const Canvas = ({ boardId }: CanvasProps) => {
   const { name } = useSelf((me) => me.info);
   return (
     <main className="h-full w-full relative bg-neutral-100 touch-none">
-      <Info />
+      <Info boardId={boardId} />
       <Participants />
       <Toolbar />
     </main>
